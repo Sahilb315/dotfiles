@@ -1,0 +1,26 @@
+# The syntax is "key = value". The whitespace around the
+# equals doesn't matter.
+
+ gtk-titlebar = false
+ gtk-wide-tabs = false
+ gtk-adwaita = false
+
+ theme = catppuccin-mocha
+ font-size = 12
+ mouse-hide-while-typing = true
+ window-decoration = true
+ background-opacity = 0.8
+ background-blur-radius = 30
+
+ foreground = c6d0f5
+ selection-background = 626880
+ selection-foreground = CCFFFF
+
+ keybind = ctrl+z=close_surface
+ keybind = ctrl+t=new_split:right
+ shell-integration = zsh
+
+ confirm-close-surface=false
+
+# Empty values reset the configuration to the default value
+ font-family =

@@ -1,0 +1,86 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-a": "project_panel::NewFile"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+      "ctrl-shift-w": "pane::CloseActiveItem",
+      "ctrl-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-n": "workspace::NewTerminal",
+      "ctrl-a": "terminal::ScrollLineUp",
+      "ctrl-d": "terminal::ScrollLineDown"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "ctrl-j": "workspace::ToggleBottomDock",
+      "ctrl-b": "workspace::ToggleLeftDock",
+      "space c a": "editor::ToggleCodeActions",
+      "ctrl-l": "vim::EndOfLine",
+      "ctrl-h": "vim::StartOfLine",
+      "shift j": "vim::LineUp"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown"
+    }
+  },
+  {
+    //vim visual mode
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "s": "editor::SelectSmallerSyntaxNode",
+      ";": "editor::SelectLargerSyntaxNode",
+      // shift-s binds (Surround) rely on custom keybinding (ctrl-g p) for vim paste
+      "shift-s '": ["workspace::SendKeystrokes", "d i ' ' left left ctrl-g p"],
+      "shift-s `": ["workspace::SendKeystrokes", "d i ` ` left left ctrl-g p"],
+      "shift-s \"": [
+        "workspace::SendKeystrokes",
+        "d i \" \" left left ctrl-g p"
+      ],
+      "shift-s [": [
+        "workspace::SendKeystrokes",
+        "d i [ space space ] left left left ctrl-g p"
+      ],
+      "shift-s ]": ["workspace::SendKeystrokes", "d i [ ] left left ctrl-g p"],
+      "shift-s {": [
+        "workspace::SendKeystrokes",
+        "d i { space space } left left left ctrl-g p"
+      ],
+      "shift-s }": ["workspace::SendKeystrokes", "d i { } left left ctrl-g p"],
+      "shift-s (": [
+        "workspace::SendKeystrokes",
+        "d i ( space space ) left left left ctrl-g p"
+      ],
+      "shift-s )": ["workspace::SendKeystrokes", "d i ( ) left left ctrl-g p"]
+    }
+  },
+  {
+    //vim insert mode
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "ctrl-g p": "vim::Paste" //Uses the vim clipboard
+    }
+  }
+]
