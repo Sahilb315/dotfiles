@@ -7,12 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "icon_theme": "Catppuccin Frappé",
   "vim_mode": true,
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "features": {
     "copilot": false,
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "none"
   },
   "file_types": {
     "Go": ["go"]

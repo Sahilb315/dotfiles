@@ -3,9 +3,9 @@
   "position": "top",
   "height": 35,
   "spacing": 5,
-  "margin-top" :3,
-  "margin-right" :3,
-  "margin-left" :3,
+  "margin-top": 3,
+  "margin-right": 3,
+  "margin-left": 3,
 
   "modules-left": [
     "custom/rofi",
@@ -14,7 +14,7 @@
     "custom/prefix",
     "hyprland/window",
     "custom/paddc",
-    "tray"
+    "tray",
   ],
 
   "modules-center": ["custom/player"],
@@ -36,16 +36,16 @@
     "clock#date",
     "custom/paddc",
     "clock#time",
-    "custom/paddc"
+    "custom/paddc",
   ],
 
   "custom/rofi": {
-		"format": "<span color='#fbf1c7' >󰮯</span>",
-		"on-click": "rofi -show drun",
+    "format": "<span color='#fbf1c7' >󰮯</span>",
+    "on-click": "rofi -show drun",
     "on-click-right": "wlogout",
-    "escape" : true,
-    "tooltip" : false
-	},
+    "escape": true,
+    "tooltip": false,
+  },
 
   // Modules configuration
   "hyprland/workspaces": {
@@ -65,11 +65,11 @@
       "8": "<span color='#cc241d' >8</span>",
       "9": "<span color='#98971a' >9</span>",
       "10": "<span color='#d79921' >10</span>",
-      "default": "<span color='#cc241d'>󰊠</span>"
+      "default": "<span color='#cc241d'>󰊠</span>",
     },
     "persistent-workspaces": {
-        "*": 5
-    }
+      "*": 5,
+    },
   },
 
   "hyprland/window": {
@@ -78,13 +78,13 @@
     "rewrite": {
       "": "<span foreground= '#458588'></span> hyprland",
       "~": " terminal",
-      "com.mitchellh.ghostty": "ghostty"
-    }
+      "com.mitchellh.ghostty": "ghostty",
+    },
   },
 
   "tray": {
     "icon-size": 15,
-    "spacing": 8
+    "spacing": 8,
   },
 
   "pulseaudio": {
@@ -96,11 +96,11 @@
     "format-source": "{volume}% ",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip": false,
-    "max-volume": 130
+    "max-volume": 130,
   },
 
   "battery#bat2": {
-    "bat": "BAT2"
+    "bat": "BAT2",
   },
 
   "battery": {
@@ -108,9 +108,9 @@
     "states": {
       "good": 99,
       "warning": 30,
-      "critical": 20
+      "critical": 20,
     },
-    "format-icons": [" "," "," "," "," "],
+    "format-icons": [" ", " ", " ", " ", " "],
     "format": "<span color='#8ec07c' > {icon}</span>{capacity}%",
     "format-critical": "<span color='#cc241d' > {icon}</span>{capacity}%",
     "format-warning": "<span color='#d8a657' > {icon}</span>{capacity}%",
@@ -119,7 +119,7 @@
     "format-charging-warning": "<span color='#d8a657' >  </span>{capacity}%",
     "format-charging-critical": "<span color='#cc241d' >  </span>{capacity}%",
     "format-plugged": "<span color='#8ec07c' >  </span>{capacity}%",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "clock#date": {
@@ -132,22 +132,19 @@
       "on-click-right": "mode",
 
       "format": {
-        "months": 
-          "<span color='#3c3835'><b>{}</b></span>",
-        "weekdays": 
-          "<span color='#fe8019' font='7'>{}</span>",
-        "today": 
-          "<span color='#cc241d'><b>{}</b></span>"
-      }
+        "months": "<span color='#3c3835'><b>{}</b></span>",
+        "weekdays": "<span color='#fe8019' font='7'>{}</span>",
+        "today": "<span color='#cc241d'><b>{}</b></span>",
+      },
     },
 
     "actions": {
       "on-click": "mode",
-      "on-click-right": "mode"
+      "on-click-right": "mode",
     },
 
     "min-length": 8,
-    "max-length": 20
+    "max-length": 20,
   },
 
   "clock#time": {
@@ -155,7 +152,7 @@
     "tooltip": false,
     // "tooltip-format": "Standard Time: {:%I:%M %p}",
     "min-length": 8,
-    "max-length": 12
+    "max-length": 12,
   },
 
   "custom/backlight": {
@@ -167,7 +164,7 @@
     "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
     "interval": 1,
     "min-length": 6,
-    "max-length": 6
+    "max-length": 6,
   },
 
   "custom/paddc": {
@@ -193,7 +190,7 @@
     "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
     "interval": 1,
     "min-length": 1,
-    "max-length": 12
+    "max-length": 12,
   },
 
   "bluetooth": {
@@ -202,28 +199,23 @@
     "format-connected": "<span color='#458588'>󰂱 </span>",
     "format-connected-battery": "<span color='#458588'>󰂱 </span>",
 
-    "tooltip-format": 
-      "{num_connections} connected",
-    "tooltip-format-disabled": 
-      "Bluetooth Disabled",
-    "tooltip-format-connected": 
-      "{num_connections} connected\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
-      "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": 
-      "{device_alias}: {device_battery_percentage}%",
+    "tooltip-format": "{num_connections} connected",
+    "tooltip-format-disabled": "Bluetooth Disabled",
+    "tooltip-format-connected": "{num_connections} connected\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}: {device_battery_percentage}%",
 
     "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
     "interval": 1,
     "min-length": 1,
-    "max-length": 10
+    "max-length": 10,
   },
 
   "custom/notification": {
     "tooltip": false,
     "rotate": 0,
     "format": "{icon}",
-    "format-icons" : {
+    "format-icons": {
       "notification": "󱅫 ",
       "none": " ",
       "dnd-notification": "󰂛 ",
@@ -238,7 +230,7 @@
     "exec": "swaync-client -swb",
     "on-click-right": "swaync-client -d -sw",
     "on-click": "swaync-client -t -sw",
-    "escape": true
+    "escape": true,
   },
 
   "custom/player": {
@@ -249,7 +241,6 @@
     "tooltip": false,
     "on-click-right": "playerctl next",
     "on-click-left": "playerctl previous",
-    "on-click": "playerctl play-pause"
-  }
+    "on-click": "playerctl play-pause",
+  },
 }
-
